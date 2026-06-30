@@ -1,5 +1,5 @@
 {
-  "name": "dotenv-doctor",
+  "name": "@hevman/dotenv-doctor",
   "version": "0.1.0",
   "description": "CLI and library for checking .env files against .env.example before secrets and missing variables break deployments.",
   "type": "module",

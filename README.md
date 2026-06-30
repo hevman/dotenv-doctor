@@ -17,13 +17,13 @@ Most apps have environment files, and most teams eventually lose time to one of 
 ## Install
 
 ```bash
-npm install -D dotenv-doctor
+npm install -D @hevman/dotenv-doctor
 ```
 
 Or run without installing:
 
 ```bash
-npx dotenv-doctor check --env .env --example .env.example
+npx @hevman/dotenv-doctor check --env .env --example .env.example
 ```
 
 ## CLI
@@ -81,7 +81,7 @@ dotenv-doctor check --env examples/.env --example examples/.env.example
 ## Library
 
 ```ts
-import { doctor, createExample } from "dotenv-doctor";
+import { doctor, createExample } from "@hevman/dotenv-doctor";
 
 const report = doctor(
   "DATABASE_URL=postgres://localhost/app",
