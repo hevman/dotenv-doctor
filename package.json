@@ -1,0 +1,51 @@
+{
+  "name": "dotenv-doctor",
+  "version": "0.1.0",
+  "description": "CLI and library for checking .env files against .env.example before secrets and missing variables break deployments.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hevman/dotenv-doctor.git"
+  },
+  "homepage": "https://github.com/hevman/dotenv-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/hevman/dotenv-doctor/issues"
+  },
+  "bin": {
+    "dotenv-doctor": "dist/cli.js",
+    "env-doctor": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "dotenv",
+    "env",
+    "environment",
+    "secrets",
+    "ci",
+    "validation",
+    "cli"
+  ],
+  "author": "hevman",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3"
+  }
+}
